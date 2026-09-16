@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Lilly ❤️‍🔥</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&display=swap');
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:"Cormorant Garamond",serif;background:#08050c;color:#fff}
+.page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:scale(1.04);transition:opacity .9s,transform 1.1s;overflow:hidden}
+.page.active{opacity:1;visibility:visible;transform:scale(1)}
+.page:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(255,105,180,.16),transparent 42%),linear-gradient(135deg,rgba(10,5,18,.76),rgba(35,5,30,.48));z-index:0}
+.card{position:relative;z-index:2;width:min(88%,620px);padding:32px 28px;text-align:center;background:rgba(20,10,25,.43);border:1px solid rgba(255,210,235,.2);border-radius:28px;box-shadow:0 20px 70px rgba(0,0,0,.45),0 0 45px rgba(255,70,170,.12);backdrop-filter:blur(9px)}
+.script{font-family:"Great Vibes",cursive;font-size:clamp(42px,10vw,78px);margin:0 0 8px}h2{font-size:clamp(28px,7vw,48px);margin:8px 0 16px}
+p{font-size:clamp(19px,4.8vw,26px);line-height:1.35;margin:12px 0;color:#f9eaf4}.small{font-size:18px;opacity:.78;letter-spacing:2px}
+.accent{color:#ffb5d9}.hot{color:#ffd0e8;text-shadow:0 0 18px rgba(255,90,170,.6)}
+button{border:0;color:white;background:linear-gradient(135deg,#8d2b70,#d94d9c);padding:14px 25px;border-radius:999px;font:600 18px "Cormorant Garamond",serif;cursor:pointer;margin-top:20px;box-shadow:0 0 25px rgba(255,75,170,.3);transition:.25s}
+button:hover{transform:translateY(-2px) scale(1.03)}
+.photoWrap{position:relative;z-index:2;text-align:center}.photo{width:min(72vw,330px);height:min(58vh,390px);object-fit:cover;border-radius:24px;box-shadow:0 18px 55px rgba(0,0,0,.6),0 0 35px rgba(255,100,190,.22);border:1px solid rgba(255,220,240,.28);transform:rotate(-2deg)}.photo.alt{transform:rotate(3deg)}
+.caption{margin-top:16px;font-size:25px}.heart{font-size:80px;animation:beat 1.15s ease-in-out infinite;text-shadow:0 0 35px #ff4da6}
+.choice{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.choice button{margin-top:12px}.secret{min-height:1.4em;margin-top:18px;color:#ffd1e7;font-size:23px}
+#particles{position:absolute;inset:0;z-index:1;pointer-events:none}.p{position:absolute;opacity:.7;animation:float linear infinite}
+@keyframes beat{50%{transform:scale(1.16)}}@keyframes float{from{transform:translateY(110vh) rotate(0)}to{transform:translateY(-15vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div id="particles"></div>
+
+<section class="page active"><div class="card"><div class="small">A little secret made only for you</div><h1 class="script">Lilly...</h1><p>I made something for you.<br>But don't rush it.</p><p class="accent">Some feelings are better discovered than explained.</p><button onclick="next()">Come in… ❤️</button></div></section>
+
+<section class="page"><div class="photoWrap"><img class="photo" src="photos/pic1.jpg" alt="Lilly"><div class="caption">I've known you for a while…<br><span class="accent">but I still discover new reasons to love you.</span></div><button onclick="next()">Stay a little longer →</button></div></section>
+
+<section class="page"><div class="card"><div class="heart">♥</div><h2>Do you know what you do to me?</h2><p>When I see you, my heart suddenly forgets how to act normally. 😭❤️</p><p class="accent">And sometimes… my thoughts aren't exactly innocent either. 😏</p><button onclick="next()">Okay… tell me more 👀</button></div></section>
+
+<section class="page"><div class="card"><h2>Okay, I'll be honest… 😳</h2><p>I love your smile.<br>I love your eyes.<br>I love having you close to me.</p><p class="hot"><strong>And your body…</strong></p><p>Yeah, Lilly… I'm not even going to lie.</p><p class="hot">Being close to you makes me feel so happy… and sometimes my feelings for you are definitely not innocent. ❤️‍🔥</p><button onclick="next()">You really said that? 😳</button></div></section>
+
+<section class="page"><div class="photoWrap"><img class="photo alt" src="photos/pic2.jpg" alt="Lilly"><div class="caption">There is something about having you close…<br><span class="accent">that makes everything else disappear.</span></div><button onclick="next()">Come closer… 🫣</button></div></section>
+
+<section class="page"><div class="card"><h2>My other side ❤️‍🔥</h2><p>I can be sweet with you.<br>I can be romantic with you.</p><p class="hot">But I also have that other side. 😏</p><p>“The side that wants you close enough to make me forget what I was going to say.”</p><div class="choice"><button onclick="reveal('I knew you were going to make me blush… 😳❤️‍🔥')">I'm curious 👀</button><button onclick="reveal('Okay… maybe I should stop before I make you blush too much. 😌')">That's enough 😳</button></div><div class="secret" id="secret"></div></div></section>
+
+<section class="page"><div class="card"><div class="small">THE LAST LITTLE SECRET</div><h1 class="script">Lilly ❤️</h1><p>Now you know a little more of what goes on in my head when it comes to you.</p><p><span class="accent">You have my heart.</span><br>You have my attention.<br><span class="hot">And you definitely have my attraction. ❤️‍🔥</span></p><p>Some feelings are too big for a text… so I built you a little place where you could feel them.</p><button onclick="finalReveal()">Open the last secret ✨</button><div class="secret" id="final"></div></div></section>
+
+<script>
+const pages=[...document.querySelectorAll('.page')];let i=0;
+function next(){if(i<pages.length-1){pages[i].classList.remove('active');i++;pages[i].classList.add('active')}}
+function prev(){if(i>0){pages[i].classList.remove('active');i--;pages[i].classList.add('active')}}
+function reveal(t){document.getElementById('secret').textContent=t}
+function finalReveal(){document.getElementById('final').textContent='i love u more than i can say u💘love is blind😁'}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev()});
+for(let n=0;n<22;n++){let s=document.createElement('span');s.className='p';s.textContent=['♥','♡','✦','·'][n%4];s.style.left=Math.random()*100+'%';s.style.fontSize=(10+Math.random()*18)+'px';s.style.animationDuration=(8+Math.random()*12)+'s';s.style.animationDelay=(-Math.random()*15)+'s';document.getElementById('particles').appendChild(s)}
+</script>
+</body></html>
